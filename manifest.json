@@ -1,0 +1,23 @@
+{
+    "name" : "Eye & Posture Care",
+    "version" : "0.0.1",
+    "description" : 
+    "A simple app which periodically reminds you to relax your Eyes and adjust your Posture.",
+    "icons" : {
+        "16" : "open_16x16.png",
+        "32" : "open_32x32.png",
+        "48" : "open_48x48.png",
+        "64" : "open_64x64.png",
+        "128" : "open_128x128.png"
+    },
+    "permissions" : ["storage", "tabs", "notifications"],
+    "browser_action" : {
+        "default_popup" : "popup.html"
+    },
+    "background" : {
+        "scripts" : ["notifier.js"]
+    },
+    "manifest_version" : 2,
+    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';"
+}
+
