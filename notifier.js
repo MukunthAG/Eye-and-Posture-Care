@@ -13,15 +13,21 @@ let sec = 0; let min = 0; let tabId;
 function closeTab() {
     min = 0; sec = 0;
     chrome.storage.local.get(["tabId"], function(tab){ 
-        chrome.tabs.remove(tab.tabId); 
+        chrome.windows.getAll({populate : true}, function(windows) {
+            for (let i = 0; i < windows.length; i++) {
+                if (windows[i].id === tab.tabId) {
+                    chrome.windows.remove(tab.tabId); 
+                }
+            }
+        })
     })
 }
 
 function minuteMaker() {
     sec++; 
     if (sec === 60) {min++; sec = 0}
-    if (min === 20 && sec === 0) {
-        chrome.tabs.create({url : "countdown.html", index : 0}, ourTab => {
+    if (min === 0 && sec === 10) {
+        chrome.windows.create({url : "countdown.html", type : "popup", state : "fullscreen"}, ourTab => {
             tabId = ourTab.id;
         });
         setTimeout(closeTab, 21000)    
