@@ -26,7 +26,7 @@ function closeTab() {
 function minuteMaker() {
     sec++; 
     if (sec === 60) {min++; sec = 0}
-    if (min === 0 && sec === 10) {
+    if (min === 20 && sec === 0) {
         chrome.windows.create({url : "countdown.html", type : "popup", state : "fullscreen"}, ourTab => {
             tabId = ourTab.id;
         });
