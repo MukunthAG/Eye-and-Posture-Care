@@ -5,6 +5,7 @@ To enable the extension, clone this repo or download and extract the zip file. T
 *  Open chrome, go to chrome://extensions
 *  Turn on developer mode
 *  Click "Load unpacked" and select the folder you just downloaded!
+
 Features which would improve the current build -
 *  Strict Mode (Closing the window before 20 seconds results in closing of all the tabs!)
 *  Improved Design
