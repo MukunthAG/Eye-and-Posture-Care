@@ -2,7 +2,7 @@
 A simple chrome extension which periodically reminds you to relax your Eyes and adjust your Posture. 
 
 To enable the extension, clone this repo or download and extract the zip file. This main folder contains all the files required for our extension. After that follow the instructions given below,
-*  Open chrome, go to chrome://extensions
+*  Open chrome, go to [chrome://extensions](chrome://extensions)
 *  Turn on developer mode
 *  Click "Load unpacked" and select the folder you just downloaded!
 
