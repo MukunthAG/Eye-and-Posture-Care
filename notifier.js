@@ -32,7 +32,7 @@ function minuteMaker() {
     });
     
     if (sec === 60) {min++; sec = 0}
-    if (min === 20 && sec === 0 && currentTab !== "examly") {
+    if (min === 1 && sec === 0 && currentTab !== "examly") {
         chrome.windows.create({url : "countdown.html", type : "popup", state : "fullscreen"}, ourTab => {
             tabId = ourTab.id;
         });
