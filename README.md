@@ -11,3 +11,4 @@ Features which would improve the current build -
 *  Improved Design
 *  Sound 
 *  Desktop Notifications when chrome is inactive as it would be annoying if suddenly a new window opening from the background(when strict mode off)
+
